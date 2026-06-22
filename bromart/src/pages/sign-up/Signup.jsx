@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Signup() {
+function Signup({ setUser }) {
   document.title = "Bro's-Mart | Sign Up";
   const navigate = useNavigate();
 
@@ -25,6 +25,7 @@ function Signup() {
       const res = await axios.post("http://localhost:5000/api/auth/signup", formData);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
+      setUser(res.data.user);
       alert("Account created successfully! 🎉");
       navigate("/");
     } catch (err) {

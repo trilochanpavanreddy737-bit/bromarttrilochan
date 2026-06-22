@@ -1,21 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-function Nav({ cartCount }) {
+function Nav({ cartCount, user, handleLogout }) {
   return (
     <div id="container1">
       <nav>
-        <h1>Bro's<span>-Mart</span></h1>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/cart">
-          🛒 Cart {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
-        </Link>
-        <Link to="/profile">Profile</Link>
-        <Link to="/contactus">Contact Us</Link>
-        <Link to="/signin">Sign In</Link>
-        <Link to="/signup">Sign Up</Link>
-        <button>Log Out</button>
+        <Link to="/" className="brand">Bro's<span>-Mart</span></Link>
+
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/cart">
+            🛒 Cart {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+          </Link>
+          <Link to="/contactus">Contact Us</Link>
+
+          {user ? (
+            <>
+              <Link to="/profile" className="nav-username">
+                👤 {user.name}
+              </Link>
+              <button onClick={handleLogout}>Log Out</button>
+            </>
+          ) : (
+            <>
+              <Link to="/signin">Sign In</Link>
+              <Link to="/signup">Sign Up</Link>
+            </>
+          )}
+        </div>
       </nav>
     </div>
   );

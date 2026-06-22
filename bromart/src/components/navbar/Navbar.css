@@ -17,25 +17,31 @@
   width: 100%;
 }
 
-#container1 h1 {
-  color: white;
+.brand {
+  color: white !important;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 
-#container1 h1 span {
+.brand span {
   color: coral;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #container1 a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   color: #ccc;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 6px;
   transition: all 0.2s ease;
-  position: relative;
 }
 
 #container1 a:hover {
@@ -43,8 +49,18 @@
   background-color: rgba(128, 0, 128, 0.4);
 }
 
+.nav-username {
+  color: coral !important;
+  font-weight: 700 !important;
+  border: 1px solid coral;
+}
+
+.nav-username:hover {
+  background-color: rgba(255, 127, 80, 0.2) !important;
+}
+
 #container1 button {
-  font-size: 15px;
+  font-size: 14px;
   padding: 8px 18px;
   background-color: transparent;
   border: 2px solid coral;
@@ -52,6 +68,7 @@
   color: coral;
   font-weight: 700;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 #container1 button:hover {

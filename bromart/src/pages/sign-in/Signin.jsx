@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Signin() {
+function Signin({ setUser }) {
   document.title = "Bro's-Mart | Sign In";
   const navigate = useNavigate();
 
@@ -23,6 +23,7 @@ function Signin() {
       const res = await axios.post("http://localhost:5000/api/auth/signin", formData);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
+      setUser(res.data.user);
       alert(`Welcome back, ${res.data.user.name}! 👋`);
       navigate("/");
     } catch (err) {
