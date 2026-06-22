@@ -1,0 +1,77 @@
+.contact-page {
+  background-color: #f4f4f4;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 450px;
+  padding: 38px;
+  box-shadow: 0 0 25px rgba(128, 0, 128, 0.45);
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.contact-logo {
+  font-size: 42px;
+  text-align: center;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 26px;
+  color: #111;
+}
+
+.contact-sub {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 11px 14px;
+  font-size: 15px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+  background-color: #fafafa;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: purple;
+  background-color: #fff;
+}
+
+.contact button {
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #111;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid purple;
+  box-shadow: 0 0 12px rgba(128, 0, 128, 0.4);
+}
+
+.contact button:hover {
+  background-color: purple;
+}
+
+.contact-note {
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+}

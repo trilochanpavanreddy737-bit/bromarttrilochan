@@ -1,0 +1,137 @@
+#container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 520px;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)),
+    url("https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1400");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 30px rgba(128, 0, 128, 0.5);
+}
+
+#container2 h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 0 18px purple;
+}
+
+#container2 p {
+  color: #ddd;
+  font-size: 18px;
+  max-width: 700px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+#container2 button {
+  margin-top: 15px;
+  padding: 14px 38px;
+  font-size: 18px;
+  background-color: coral;
+  color: white;
+  font-weight: 700;
+  border-radius: 30px;
+  box-shadow: 0 0 18px coral;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+#container2 button:hover {
+  background-color: white;
+  color: coral;
+  transform: scale(1.06);
+}
+
+/* Features */
+.features-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 30px;
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 30px 25px;
+  width: 230px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 22px rgba(128, 0, 128, 0.45);
+}
+
+.feature-card span {
+  font-size: 38px;
+}
+
+.feature-card h3 {
+  margin: 12px 0 8px;
+  font-size: 17px;
+  color: #111;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Categories */
+.categories-section {
+  padding: 40px 30px 60px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.categories-section h2 {
+  font-size: 32px;
+  color: #111;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(128,0,128,0.2);
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  background-color: #111;
+  color: white;
+  border-radius: 14px;
+  padding: 25px 35px;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(128, 0, 128, 0.5);
+  transition: all 0.2s ease;
+  min-width: 130px;
+}
+
+.category-item:hover {
+  background-color: purple;
+  transform: scale(1.06);
+}
+
+.category-item span {
+  font-size: 36px;
+}
+
+.category-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
