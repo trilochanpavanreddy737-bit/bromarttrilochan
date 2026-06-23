@@ -3,6 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const authRoutes = require("./routes/auth.routes");
+const paymentRoutes = require("./routes/payment.routes");
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/payment", paymentRoutes);
 
 app.get("/", (req, res) => {
   res.send("Bro's-Mart Backend is Running! 🚀");

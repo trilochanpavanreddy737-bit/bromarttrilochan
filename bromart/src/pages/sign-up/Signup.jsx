@@ -21,6 +21,11 @@ function Signup({ setUser }) {
     e.preventDefault();
     setError("");
     setLoading(true);
+    if (formData.mobile.length !== 10 || isNaN(formData.mobile)) {
+  setError("Please enter a valid 10 digit mobile number!");
+  setLoading(false);
+  return;
+}
     try {
       const res = await axios.post("http://localhost:5000/api/auth/signup", formData);
       localStorage.setItem("token", res.data.token);
@@ -53,7 +58,16 @@ function Signup({ setUser }) {
         </select>
         <input type="email" name="email" placeholder="Email Address" onChange={handleChange} required />
         <input type="password" name="password" placeholder="Create Password" onChange={handleChange} required />
-        <input type="tel" name="mobile" placeholder="Mobile Number" onChange={handleChange} required />
+        <input 
+  type="tel" 
+  name="mobile" 
+  placeholder="Mobile Number (10 digits)" 
+  onChange={handleChange} 
+  pattern="[0-9]{10}"
+  maxLength={10}
+  title="Please enter a valid 10 digit mobile number"
+  required 
+/>
         <button type="submit" disabled={loading}>
           {loading ? "Creating Account..." : "Create Account →"}
         </button>
